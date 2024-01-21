@@ -1,0 +1,5 @@
+import requests
+url='http://ZUZANNA/fmedatadownload/Dashboards/zajecia10.fmw?e-mail=z.sabat02%40gmail.com&e-mail2=z.sabat02%40gmail.com&start=20240102000000&chmury=30&powiat=krakowski&koniec=20240102000000&SourceDataset_SHAPEFILE_3=C%3A%5CUsers%5Czsaba%5COneDrive%5CDokumenty%5Cpowiaty.shp&SourceDataset_SHAPEFILE=C%3A%5CUsers%5Czsaba%5COneDrive%5CDokumenty%5Cpowiaty.shp&DestDataset_GEOTIFF_5=C%3A%5CUsers%5Czsaba%5COneDrive%5CDokumenty%5CFME&DestDataset_GEOTIFF_4=C%3A%5CUsers%5Czsaba%5COneDrive%5CDokumenty%5CFME&DestDataset_GEOTIFF=C%3A%5CUsers%5Czsaba%5COneDrive%5CDokumenty%5CFME&opt_showresult=false&opt_servicemode=sync'
+myobj = {'Authorization': 'fmetoken token=6636d763320d196e7c2b84b0f3bcb7aa8f263cdf'}
+x = requests.post(url, headers=myobj)
+print(x.text)
